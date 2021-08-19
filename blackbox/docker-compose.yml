@@ -11,7 +11,7 @@ services:
       - "/etc/nginx/nginx.conf"
 
   isubank:
-    image: golang:1.11
+    image: golang:1.13
     command: bash -c "go get ./... && go run main.go -port=5515 -dbhost=127.0.0.1 -dbuser=root -dbpass=root"
     network_mode: host
     working_dir: /go/src/bank
